@@ -24,7 +24,7 @@ class CheckSamePassword implements Rule
      * @param  mixed  $value
      * @return bool
      */
-    public function passes($attribute, $value)
+    public function passes($attribute, $value): bool
     {
         return !Hash::check($value,  auth()->user()->password);
     }
@@ -34,7 +34,7 @@ class CheckSamePassword implements Rule
      *
      * @return string
      */
-    public function message()
+    public function message(): string
     {
         return 'Password must be different from your current password';
     }

@@ -14,7 +14,6 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable implements JWTSubject, MustVerifyEmail
 {
     use Notifiable, SpatialTrait;
-
     /**
      * The attributes that are mass assignable.
      *
@@ -85,5 +84,10 @@ class User extends Authenticatable implements JWTSubject, MustVerifyEmail
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+    public function designs()
+    {
+        return $this->hasMany(Design::class);
     }
 }

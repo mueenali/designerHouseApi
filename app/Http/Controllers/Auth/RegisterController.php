@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -52,13 +53,8 @@ class RegisterController extends Controller
         ]);
     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\User
-     */
-    protected function create(array $data)
+
+    protected function create(array $data): User
     {
         return User::create([
             'username' => $data['username'],
@@ -68,7 +64,7 @@ class RegisterController extends Controller
         ]);
     }
 
-    protected function registered(Request $request, User $user)
+    protected function registered(Request $request, User $user): JsonResponse
     {
         return response()->json($user, 200);
     }

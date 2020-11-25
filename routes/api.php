@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['auth:api']], fn() => [
         Route::post('logout', 'Auth\LoginController@logout'),
         Route::put('settings/password', 'User\SettingsController@updatePassword'),
-        Route::put('settings/profile', 'User\SettingsController@updateProfile')
+        Route::put('settings/profile', 'User\SettingsController@updateProfile'),
+        Route::post('designs', 'Designs\DesignController@upload'),
+        Route::put('designs/{id}', 'Designs\DesignController@update'),
+        Route::delete('designs/{id}', 'Designs\DesignController@delete'),
     ]
 );
 

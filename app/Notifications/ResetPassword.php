@@ -8,7 +8,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 class ResetPassword extends Notification
 {
 
-    public function toMail($notifiable)
+    public function toMail($notifiable): MailMessage
     {
         $url = url(config('app.client_url').'/resetPassword/'
                  .$this->token.'?email='.urlencode($notifiable->email));

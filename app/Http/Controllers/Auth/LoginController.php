@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
@@ -23,7 +24,7 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    public function attemptLogin(Request $request)
+    public function attemptLogin(Request $request): bool
     {
         $token = $this->guard()->attempt($this->credentials($request));
         if(!$token) {
@@ -40,7 +41,7 @@ class LoginController extends Controller
         return true;
     }
 
-    protected function sendLoginResponse(Request $request)
+    protected function sendLoginResponse(Request $request): JsonResponse
     {
         $this->clearLoginAttempts($request);
         $token = (string)$this->guard()->getToken();
@@ -49,7 +50,7 @@ class LoginController extends Controller
         return response()->json(['token' => $token, 'tokenType' => 'bearer', 'expires_in' => $expiration]);
     }
 
-    protected function sendFailedLoginResponse()
+    protected function sendFailedLoginResponse(): JsonResponse
     {
         $user = $this->guard()->user();
 
@@ -60,7 +61,7 @@ class LoginController extends Controller
         throw ValidationException::withMessages([$this->username() => "Invalid credentials"]);
     }
 
-    public function logout()
+    public function logout(): JsonResponse
     {
         $this->guard()->logout();
         return response()->json(['message' => 'logged out successfully'], 200);

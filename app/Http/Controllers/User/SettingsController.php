@@ -6,38 +6,34 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdatePasswordRequest;
 use App\Http\Requests\UpdateProfileRequest;
 use App\Http\Resources\UserResource;
+use App\Services\Interfaces\IUserService;
 use Grimzy\LaravelMysqlSpatial\Types\Point;
+use Illuminate\Http\JsonResponse;
 
 
 class SettingsController extends Controller
 {
     //
-    public function updateProfile(UpdateProfileRequest $request)
+    private IUserService $userService;
+
+    public function __construct(IUserService $userService)
     {
-        $user = auth()->user();
-        $location = new Point($request->location['latitude'], $request->location['longitude']);
-
-        $user->update([
-            'name' => $request->name,
-            'formatted_address' => $request->formatted_address,
-            'available_to_hire' => $request->available_to_hire,
-            'about' => $request->about,
-            'tagline' => $request->tagline,
-            'location' => $location
-        ]);
-
+        $this->userService = $userService;
+    }
+    public function updateProfile(UpdateProfileRequest $request): UserResource
+    {
+        $user = $this->userService->updateProfile($request);
 
         return new UserResource($user);
     }
 
-    public function updatePassword(UpdatePasswordRequest $request)
+    public function updatePassword(UpdatePasswordRequest $request): JsonResponse
     {
-        $user = auth()->user();
+        $result = $this->userService->updatePassword($request->password);
+        if($result) {
+            return response()->json(['message' => 'Password updated successfully']);
+        }
 
-        $user->update([
-            'password' => bcrypt($request->password)
-        ]);
-
-        return response()->json(['message' => 'Password updated successfully']);
+        return response()->json(['errors' => ['Password' => 'Problem in updating the password']], 400);
     }
 }
