@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Services\Interfaces\IAuthService;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -26,15 +27,12 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
+    private IAuthService $authService;
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function __construct(IAuthService $authService)
     {
         $this->middleware('guest');
+        $this->authService = $authService;
     }
 
     /**
@@ -56,7 +54,7 @@ class RegisterController extends Controller
 
     protected function create(array $data): User
     {
-        return User::create([
+        return $this->authService->createUser([
             'username' => $data['username'],
             'name' => $data['name'],
             'email' => $data['email'],

@@ -12,4 +12,5 @@ interface IDesignService
     public function upload($image): Design;
     public function update(Request $request, int $id): Design;
     public function delete(int $id): bool;
+    public function getAllDesigns(): array;
 }

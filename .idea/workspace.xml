@@ -24,28 +24,24 @@
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/SettingsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/SettingsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Notifications/ResetPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/ResetPassword.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Notifications/VerifyEmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/VerifyEmail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/CheckSamePassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/CheckSamePassword.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/MatchOldPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/MatchOldPassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Designs/DesignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Designs/DesignController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/DesignResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/DesignResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Design.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Design.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/DesignService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/DesignService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Interfaces/IDesignService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Interfaces/IDesignService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/uploads/large1605958743_blank_diagram_(3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/uploads/large1606280188_doctor_nav.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/uploads/original/1605958743_blank_diagram_(3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/uploads/original/1606280188_doctor_nav.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/uploads/thumbnail1605958743_blank_diagram_(3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/uploads/thumbnail1606280188_doctor_nav.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,6 +169,8 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-client" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/cviebrock/eloquent-taggable" />
     </include_path>
   </component>
   <component name="ProjectId" id="1j8yuzAe7R42zOloKkDhlW6ztrT" />
@@ -234,7 +232,11 @@
       <workItem from="1605775278969" duration="10770000" />
       <workItem from="1605820418720" duration="11227000" />
       <workItem from="1606119508364" duration="6450000" />
-      <workItem from="1606276401709" duration="6202000" />
+      <workItem from="1606276401709" duration="7732000" />
+      <workItem from="1606394000896" duration="509000" />
+      <workItem from="1606907706407" duration="8521000" />
+      <workItem from="1606917825825" duration="199000" />
+      <workItem from="1606984174005" duration="3213000" />
     </task>
     <servers />
   </component>
@@ -274,10 +276,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1604792862786" />
-    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser" timestamp="1606282391065">
+    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser" timestamp="1606986495906">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1606282391065" />
+    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1606986495906" />
     <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606136412162">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -310,10 +312,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1202" height="234" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603200468081" />
-    <state x="395" y="51" key="NewPhpClassDialog" timestamp="1605954563153">
+    <state x="395" y="51" key="NewPhpClassDialog" timestamp="1606984573460">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="395" y="51" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1605954563153" />
+    <state x="395" y="51" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1606984573460" />
     <state x="134" y="0" key="SettingsEditor" timestamp="1603393097275">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -322,9 +324,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="289" y="147" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1606282410837" />
-    <state x="295" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1606282612561">
+    <state x="295" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1606916069721">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="295" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1606282612561" />
+    <state x="295" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1606916069721" />
   </component>
 </project>

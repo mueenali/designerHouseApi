@@ -57,6 +57,10 @@ class Handler extends ExceptionHandler
         {
             return response()->json(['errors' => ['message' => 'The resource was not found']], 404);
         }
+        if($exception instanceof ModelNotDefined && $request->expectsJson())
+        {
+            return response()->json(['errors' => ['message' => 'model not defined']], 500);
+        }
 
         return parent::render($request, $exception);
     }

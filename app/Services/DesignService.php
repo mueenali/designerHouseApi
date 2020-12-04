@@ -6,6 +6,7 @@ namespace App\Services;
 
 use App\Jobs\UploadImage;
 use App\Models\Design;
+use App\Repositories\Interfaces\IDesignRepository;
 use App\Services\Interfaces\IDesignService;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -17,6 +18,13 @@ use Illuminate\Support\Str;
 class DesignService implements IDesignService
 {
     use ValidatesRequests, AuthorizesRequests, DispatchesJobs;
+
+    private IDesignRepository $designRepository;
+
+    public function __construct(IDesignRepository $designRepository)
+    {
+        $this->designRepository = $designRepository;
+    }
 
     public function upload($image): Design
     {
@@ -38,27 +46,30 @@ class DesignService implements IDesignService
 
     public function update(Request $request, int $id): Design
     {
-        $design = Design::findOrFail($id);
+        $design = $this->designRepository->find($id);
         $this->authorize('update', $design);
 
         $this->validate($request, [
             'title' => ['required', 'unique:designs,title,'.$id],
-            'description' => ['required', 'string', 'min:20', 'max:140']
+            'description' => ['required', 'string', 'min:20', 'max:140'],
+            'tags' => ['required']
         ]);
 
-        $design->update([
+       $design = $this->designRepository->update($id,[
             'title' => $request->title,
             'description' => $request->description,
             'slug' => Str::slug($request->title),
             'is_live' => !$design->upload_successful? false : $request->is_live
         ]);
 
+        $this->designRepository->applyTags($id,$request->tags);
+
         return $design;
     }
 
     public function delete(int $id): bool
     {
-        $design = Design::findOrFail($id);
+        $design = $this->designRepository->find($id);
         $this->authorize('delete',$design);
 
         foreach(['large', 'original', 'thumbnail'] as $size)
@@ -69,6 +80,11 @@ class DesignService implements IDesignService
             }
         }
 
-         return $design->delete();
+         return $this->designRepository->delete($id);
+    }
+
+    public function getAllDesigns(): array
+    {
+        return $this->designRepository->all();
     }
 }

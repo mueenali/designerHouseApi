@@ -41,14 +41,6 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
-$app->bind(
-    'App\Services\Interfaces\IDesignService',
-    'App\Services\DesignService'
-);
-$app->bind(
-    'App\Services\Interfaces\IUserService',
-    'App\Services\UserService'
-);
 
 /*
 |--------------------------------------------------------------------------

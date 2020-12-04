@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Services\Interfaces\IAuthService;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -22,30 +23,25 @@ class VerificationController extends Controller
     |
     */
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    private IAuthService $authService;
+    public function __construct(IAuthService $authService)
     {
 //        $this->middleware('signed')->only('verify');
         $this->middleware('throttle:6,1')->only('verify', 'resend');
+        $this->authService = $authService;
     }
 
     public function verify(Request $request, User $user): JsonResponse
     {
         if(!URL::hasValidSignature($request)) {
-            return response()->json(["errors" => ["message" => "Invalid verification link",]], 422);
+            return response()->json(["errors" => ["message" => "Invalid verification link"]], 422);
         }
 
-        if($user->hasVerifiedEmail()) {
-            return response()->json(["errors" => ["message" => "Email Address is already verified",]], 422);
+        $result = $this->authService->verifyUserAccount($user);
+
+        if(!$result) {
+            return response()->json(["errors" => ["message" => "Email Address is already verified"]], 422);
         }
-
-        $user->markEmailAsVerified();
-
-        event(new Verified($user));
 
         return response()->json(["message" => "Email successfully verified"], 200);
     }
@@ -56,17 +52,12 @@ class VerificationController extends Controller
             'email' => ['email', 'required']
         ]);
 
-        $user = User::where('email', $request->email)->first();
+        $result = $this->authService->resendVerificationLink($request->email);
 
-        if(!$user) {
-            return response()->json(['errors' => ['email' => 'No user found with this email address']], 422);
-        }
-
-        if($user->hasVerifiedEmail()) {
+        if(!$result) {
             return response()->json(["errors" => ["message" => "Email Address is already verified",]], 422);
         }
 
-        $user->sendEmailVerificationNotification();
         return response()->json(['status' => 'verification link resent'], 200);
     }
 }

@@ -8,12 +8,14 @@ use App\Http\Resources\DesignResource;
 use App\Services\Interfaces\IDesignService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 
 class DesignController extends Controller
 {
     //
     private IDesignService $designService;
+
     public function __construct(IDesignService $designService)
     {
         $this->designService = $designService;
@@ -34,15 +36,25 @@ class DesignController extends Controller
         return new DesignResource($design);
     }
 
-    public function delete(int $id)
+    public function delete(int $id): JsonResponse
     {
         $result = $this->designService->delete($id);
 
-        if(!$result)
-        {
+        if (!$result) {
             return response()->json(['error' => ['design' => 'Problem in deleting the design']], 400);
         }
 
         return response()->json(['message' => 'Design deleted successfully']);
+    }
+
+    public function index(): AnonymousResourceCollection
+    {
+        $designs = $this->designService->getAllDesigns();
+        return DesignResource::collection($designs);
+    }
+
+    public function findDesign(int $id)
+    {
+
     }
 }
