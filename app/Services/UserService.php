@@ -50,6 +50,6 @@ class UserService implements IUserService
 
     public function getAllUsers(): Collection
     {
-        return $this->userRepository->withCriteria([new EagerLoad('designs')])->all();
+        return $this->userRepository->withCriteria([new EagerLoad(['designs'])])->all();
     }
 }

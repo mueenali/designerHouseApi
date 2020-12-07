@@ -22,7 +22,10 @@ Route::group(['middleware' => ['auth:api']], fn() => [
         Route::delete('designs/{id}', 'Designs\DesignController@delete'),
         Route::get('designs', 'Designs\DesignController@index'),
         Route::get('designs/{id}', 'Designs\DesignController@findDesign'),
-        Route::get('users', 'User\UserController@index')
+        Route::post('designs/{id}/comments', 'Designs\CommentController@store'),
+        Route::put('comments/{id}', 'Designs\CommentController@update'),
+        Route::delete('comments/{id}', 'Designs\CommentController@delete'),
+        Route::get('users', 'User\UserController@index'),
     ]
 );
 

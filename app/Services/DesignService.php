@@ -6,6 +6,7 @@ namespace App\Services;
 
 use App\Jobs\UploadImage;
 use App\Models\Design;
+use App\Repositories\Eloquent\Criteria\EagerLoad;
 use App\Repositories\Eloquent\Criteria\ForUser;
 use App\Repositories\Eloquent\Criteria\IsLive;
 use App\Repositories\Eloquent\Criteria\LatestFirst;
@@ -91,16 +92,16 @@ class DesignService implements IDesignService
     {
         return $this->designRepository->withCriteria(
             [
-                new LatestFirst()
-                , new IsLive(),
-                new ForUser(1)
+                new LatestFirst(),
+                new IsLive(),
+                new ForUser(auth()->id()),
+                new EagerLoad(['user', 'comments'])
             ])->all();
     }
 
     public function findDesign(int $id): Design
     {
-       return $this->designRepository->find($id);
+       return $this->designRepository->withCriteria([new EagerLoad(['comments'])])->find($id);
     }
-
 
 }

@@ -62,6 +62,8 @@ class Handler extends ExceptionHandler
             return response()->json(['errors' => ['message' => 'model not defined']], 500);
         }
 
+
         return parent::render($request, $exception);
     }
+
 }

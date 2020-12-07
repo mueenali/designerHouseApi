@@ -20,20 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60d29328-1f52-4112-9a81-5bad95e82bd6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DesignHouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DesignHouse.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Designs/DesignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Designs/DesignController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/DesignResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/DesignResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Design.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Design.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/ServicesServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/ServicesServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/Criteria/EagerLoad.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/Criteria/EagerLoad.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/DesignService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/DesignService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Interfaces/IDesignService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Interfaces/IDesignService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Interfaces/IUserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Interfaces/IUserService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UserService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -234,7 +233,7 @@
       <workItem from="1606984174005" duration="3213000" />
       <workItem from="1607105771633" duration="650000" />
       <workItem from="1607166963600" duration="3389000" />
-      <workItem from="1607334399217" duration="3526000" />
+      <workItem from="1607334399217" duration="13394000" />
     </task>
     <servers />
   </component>
@@ -274,10 +273,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1604792862786" />
-    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser" timestamp="1607346473856">
+    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser" timestamp="1607352723369">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1607346473856" />
+    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1607352723369" />
     <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606136412162">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -310,10 +309,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1202" height="234" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603200468081" />
-    <state x="395" y="51" key="NewPhpClassDialog" timestamp="1607346460097">
+    <state x="395" y="51" key="NewPhpClassDialog" timestamp="1607348356598">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="395" y="51" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1607346460097" />
+    <state x="395" y="51" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1607348356598" />
     <state x="468" y="252" key="NewPhpFileDialog" timestamp="1607168335921">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -326,10 +325,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="225" y="61" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1607106344326" />
-    <state x="289" y="147" key="run.anything.popup" timestamp="1606282410837">
+    <state x="289" y="147" key="run.anything.popup" timestamp="1607352236806">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="289" y="147" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1606282410837" />
+    <state x="289" y="147" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1607352236806" />
     <state x="295" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1606916069721">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

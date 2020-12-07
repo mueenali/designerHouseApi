@@ -9,8 +9,8 @@ use App\Repositories\Criteria\ICriterion;
 class EagerLoad implements ICriterion
 {
 
-    private string $relationships;
-    public function __construct(string $relationships)
+    private array $relationships;
+    public function __construct(array $relationships)
     {
         $this->relationships = $relationships;
     }
