@@ -5,13 +5,20 @@ namespace App\Services;
 
 
 use App\Http\Requests\UpdateProfileRequest;
+use App\Repositories\Eloquent\Criteria\EagerLoad;
+use App\Repositories\Interfaces\IUserRepository;
 use App\Services\Interfaces\IUserService;
 use Grimzy\LaravelMysqlSpatial\Types\Point;
 use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Database\Eloquent\Collection;
 
 class UserService implements IUserService
 {
-
+    private IUserRepository $userRepository;
+    public function __construct(IUserRepository $userRepository)
+    {
+        $this->userRepository = $userRepository;
+    }
     public function updateProfile(UpdateProfileRequest $request): Authenticatable
     {
         $user = auth()->user();
@@ -39,5 +46,10 @@ class UserService implements IUserService
        }
 
        return false;
+    }
+
+    public function getAllUsers(): Collection
+    {
+        return $this->userRepository->withCriteria([new EagerLoad('designs')])->all();
     }
 }

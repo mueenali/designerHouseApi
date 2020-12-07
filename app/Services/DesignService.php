@@ -6,8 +6,12 @@ namespace App\Services;
 
 use App\Jobs\UploadImage;
 use App\Models\Design;
+use App\Repositories\Eloquent\Criteria\ForUser;
+use App\Repositories\Eloquent\Criteria\IsLive;
+use App\Repositories\Eloquent\Criteria\LatestFirst;
 use App\Repositories\Interfaces\IDesignRepository;
 use App\Services\Interfaces\IDesignService;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -83,8 +87,20 @@ class DesignService implements IDesignService
          return $this->designRepository->delete($id);
     }
 
-    public function getAllDesigns(): array
+    public function getAllDesigns(): Collection
     {
-        return $this->designRepository->all();
+        return $this->designRepository->withCriteria(
+            [
+                new LatestFirst()
+                , new IsLive(),
+                new ForUser(1)
+            ])->all();
     }
+
+    public function findDesign(int $id): Design
+    {
+       return $this->designRepository->find($id);
+    }
+
+
 }

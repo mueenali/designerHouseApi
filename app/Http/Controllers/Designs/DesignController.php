@@ -53,8 +53,9 @@ class DesignController extends Controller
         return DesignResource::collection($designs);
     }
 
-    public function findDesign(int $id)
+    public function findDesign(int $id): DesignResource
     {
-
+        $design = $this->designService->findDesign($id);
+        return new DesignResource($design);
     }
 }

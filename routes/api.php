@@ -20,6 +20,9 @@ Route::group(['middleware' => ['auth:api']], fn() => [
         Route::post('designs', 'Designs\DesignController@upload'),
         Route::put('designs/{id}', 'Designs\DesignController@update'),
         Route::delete('designs/{id}', 'Designs\DesignController@delete'),
+        Route::get('designs', 'Designs\DesignController@index'),
+        Route::get('designs/{id}', 'Designs\DesignController@findDesign'),
+        Route::get('users', 'User\UserController@index')
     ]
 );
 

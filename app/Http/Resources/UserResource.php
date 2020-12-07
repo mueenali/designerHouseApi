@@ -24,7 +24,8 @@ class UserResource extends JsonResource
             'tagline' => $this->tagline,
             'location' => $this->location,
             'available_to_hire' => $this->available_to_hire,
-            'created_at' => $this->created_at->diffForHumans()
+            'created_at' => $this->created_at->diffForHumans(),
+            'designs' => $this->designs
         ];
     }
 }

@@ -5,10 +5,12 @@ namespace App\Repositories\Eloquent;
 
 
 use App\Exceptions\ModelNotDefined;
+use App\Repositories\Criteria\ICriteria;
 use App\Repositories\Interfaces\IBaseRepository;
+use Illuminate\Support\Arr;
 
 
- abstract class BaseRepository implements IBaseRepository
+abstract class BaseRepository implements IBaseRepository, ICriteria
 {
 
     protected $model;
@@ -20,7 +22,7 @@ use App\Repositories\Interfaces\IBaseRepository;
 
     public function all()
     {
-        return $this->model->all();
+        return $this->model->get();
     }
 
     public function find(int $id)
@@ -61,7 +63,18 @@ use App\Repositories\Interfaces\IBaseRepository;
         return $record->delete();
     }
 
-    private function getModelClass()
+    public function withCriteria(...$criteria)
+    {
+        $criteria = Arr::flatten($criteria);
+        foreach ($criteria as $criterion)
+        {
+            $this->model = $criterion->apply($this->model);
+        }
+
+        return $this;
+    }
+
+     private function getModelClass()
     {
         if(!method_exists($this, 'model'))
         {
