@@ -58,4 +58,21 @@ class DesignController extends Controller
         $design = $this->designService->findDesign($id);
         return new DesignResource($design);
     }
+
+    public function like(int $id)
+    {
+        $result = $this->designService->likeDesign($id);
+        if(!$result)
+        {
+            return response()->json(['message' => 'successfully unliked the design']);
+        }
+
+        return response()->json(['message' => 'successfully liked the design']);
+    }
+
+    public function userHasLiked(int $id)
+    {
+        $isLiked = $this->designService->isLikedByUser($id);
+        return response()->json(['liked' => $isLiked]);
+    }
 }

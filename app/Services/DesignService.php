@@ -104,4 +104,24 @@ class DesignService implements IDesignService
        return $this->designRepository->withCriteria([new EagerLoad(['comments'])])->find($id);
     }
 
+    public function likeDesign(int $id): bool
+    {
+        $design = $this->designRepository->find($id);
+
+        if($design->isLikedByUser(auth()->id()))
+        {
+            $design->unLike();
+            return false;
+        }else {
+            $design->like();
+            return true;
+        }
+    }
+
+    public function isLikedByUser(int $id): bool
+    {
+        $design = $this->designRepository->find($id);
+        return $design->isLikedByUser(auth()->id());
+    }
+
 }

@@ -15,4 +15,6 @@ interface IDesignService
     public function delete(int $id): bool;
     public function getAllDesigns(): Collection;
     public function findDesign(int $id): Design;
+    public function likeDesign(int $id): bool;
+    public function isLikedByUser(int $id): bool;
 }

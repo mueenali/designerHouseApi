@@ -26,6 +26,8 @@ Route::group(['middleware' => ['auth:api']], fn() => [
         Route::put('comments/{id}', 'Designs\CommentController@update'),
         Route::delete('comments/{id}', 'Designs\CommentController@delete'),
         Route::get('users', 'User\UserController@index'),
+        Route::post('designs/{id}/like', 'Designs\DesignController@like'),
+        Route::get('designs/{id}/liked', 'Designs\DesignController@userHasLiked')
     ]
 );
 
