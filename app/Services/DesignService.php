@@ -15,14 +15,13 @@ use App\Services\Interfaces\IDesignService;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class DesignService implements IDesignService
 {
-    use ValidatesRequests, AuthorizesRequests, DispatchesJobs;
+    use AuthorizesRequests, DispatchesJobs;
 
     private IDesignRepository $designRepository;
 
@@ -53,12 +52,6 @@ class DesignService implements IDesignService
     {
         $design = $this->designRepository->find($id);
         $this->authorize('update', $design);
-
-        $this->validate($request, [
-            'title' => ['required', 'unique:designs,title,'.$id],
-            'description' => ['required', 'string', 'min:20', 'max:140'],
-            'tags' => ['required']
-        ]);
 
        $design = $this->designRepository->update($id,[
             'title' => $request->title,

@@ -30,9 +30,7 @@ class SettingsController extends Controller
     public function updatePassword(UpdatePasswordRequest $request): JsonResponse
     {
         $result = $this->userService->updatePassword($request->password);
-        if($result) {
-            return response()->json(['message' => 'Password updated successfully']);
-        }
+        if($result) return response()->json(['message' => 'Password updated successfully']);
 
         return response()->json(['errors' => ['Password' => 'Problem in updating the password']], 400);
     }

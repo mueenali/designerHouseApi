@@ -5,10 +5,12 @@ namespace App\Providers;
 use App\Repositories\Eloquent\BaseRepository;
 use App\Repositories\Eloquent\CommentRepository;
 use App\Repositories\Eloquent\DesignRepository;
+use App\Repositories\Eloquent\TeamRepository;
 use App\Repositories\Eloquent\UserRepository;
 use App\Repositories\Interfaces\IBaseRepository;
 use App\Repositories\Interfaces\ICommentRepository;
 use App\Repositories\Interfaces\IDesignRepository;
+use App\Repositories\Interfaces\ITeamRepository;
 use App\Repositories\Interfaces\IUserRepository;
 use Illuminate\Support\ServiceProvider;
 
@@ -35,5 +37,6 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(IBaseRepository::class, BaseRepository::class);
         $this->app->bind(IUserRepository::class, UserRepository::class);
         $this->app->bind(ICommentRepository::class, CommentRepository::class);
+        $this->app->bind(ITeamRepository::class, TeamRepository::class);
     }
 }

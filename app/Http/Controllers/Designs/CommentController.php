@@ -37,9 +37,7 @@ class CommentController extends Controller
         $result = $this->commentService->deleteComment($id);
 
         if(!$result)
-        {
             return response()->json(['errors' => ['comment' => 'Problem in deleting the comment']], 400);
-        }
 
         return response()->json(['message' => 'Comment deleted successfully']);
     }

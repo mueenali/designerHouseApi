@@ -31,6 +31,12 @@ class DesignController extends Controller
 
     public function update(Request $request, int $id): DesignResource
     {
+        $this->validate($request, [
+            'title' => ['required', 'unique:designs,title,'.$id],
+            'description' => ['required', 'string', 'min:20', 'max:140'],
+            'tags' => ['required']
+        ]);
+
         $design = $this->designService->update($request, $id);
 
         return new DesignResource($design);
@@ -40,9 +46,8 @@ class DesignController extends Controller
     {
         $result = $this->designService->delete($id);
 
-        if (!$result) {
+        if (!$result)
             return response()->json(['error' => ['design' => 'Problem in deleting the design']], 400);
-        }
 
         return response()->json(['message' => 'Design deleted successfully']);
     }
@@ -62,10 +67,8 @@ class DesignController extends Controller
     public function like(int $id)
     {
         $result = $this->designService->likeDesign($id);
-        if(!$result)
-        {
-            return response()->json(['message' => 'successfully unliked the design']);
-        }
+
+        if(!$result) return response()->json(['message' => 'successfully unliked the design']);
 
         return response()->json(['message' => 'successfully liked the design']);
     }
