@@ -34,7 +34,8 @@ class DesignController extends Controller
         $this->validate($request, [
             'title' => ['required', 'unique:designs,title,'.$id],
             'description' => ['required', 'string', 'min:20', 'max:140'],
-            'tags' => ['required']
+            'tags' => ['required'],
+            'team' => ['required_if:assign_to_team,true']
         ]);
 
         $design = $this->designService->update($request, $id);
