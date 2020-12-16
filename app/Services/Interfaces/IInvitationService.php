@@ -9,5 +9,6 @@ use App\Models\Invitation;
 interface IInvitationService
 {
     public function inviteUserToTeam(int $team_id, string $email): Invitation;
+    public function resendInvitation(int $id): void;
 
 }

@@ -20,6 +20,12 @@ class InvitationsController extends Controller
     public function invite(InviteUserRequest $request ,int $team_id)
     {
         $invitation  = $this->invitationService->inviteUserToTeam($team_id, $request->email);
-        return response(['message' => 'Invitation sent to user', 'invitation' => $invitation]);
+        return response()->json(['message' => 'Invitation sent to user', 'invitation' => $invitation]);
+    }
+
+    public function resend(int $id)
+    {
+        $this->invitationService->resendInvitation($id);
+        return response()->json(['message' => "Invitation resent"]);
     }
 }

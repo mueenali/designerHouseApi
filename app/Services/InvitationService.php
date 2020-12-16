@@ -34,12 +34,8 @@ class InvitationService implements IInvitationService
     public function inviteUserToTeam(int $team_id, string $email): Invitation
     {
         $team = $this->teamRepository->find($team_id);
-        $user = auth()->user();
 
-        if(! $user->isOwnerOfTeam($team))
-        {
-            throw new UnauthorizedException('You are not the owner of the team', 401);
-        }
+        is_owner_of_team($team);
 
         if($team->hasPendingInvite($email))
         {
@@ -61,6 +57,18 @@ class InvitationService implements IInvitationService
         return $this->createInvitation(true ,$team->id, $email);
     }
 
+
+    public function resendInvitation(int $id): void
+    {
+        $invitation = $this->invitationRepository->find($id);
+        $recipient = $this->userRepository->findByEmail($invitation->recipient_email);
+
+        is_owner_of_team($invitation->team);
+
+        send_email($invitation->recipient_email,
+            new SendInvitationToJoinTeam($invitation, !is_null($recipient)));
+    }
+
     private function createInvitation(bool $user_exists, int $team_id, string $email): Invitation
     {
         $invitation = $this->invitationRepository->create([
@@ -70,10 +78,12 @@ class InvitationService implements IInvitationService
             'token' => md5(uniqid(microtime()))
         ]);
 
-        Mail::to($email)->send(new SendInvitationToJoinTeam($invitation, $user_exists));
+        send_email($email, new SendInvitationToJoinTeam($invitation, $user_exists));
 
         return $invitation;
     }
+
+
 
 
 }
