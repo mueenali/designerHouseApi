@@ -2,10 +2,12 @@
 
 namespace App\Exceptions;
 
+use Dotenv\Exception\ValidationException;
 use Exception;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Validation\UnauthorizedException;
 
 class Handler extends ExceptionHandler
 {
@@ -57,11 +59,21 @@ class Handler extends ExceptionHandler
         {
             return response()->json(['errors' => ['message' => 'The resource was not found']], 404);
         }
-        if($exception instanceof ModelNotDefined && $request->expectsJson())
+
+        if($exception instanceof UnauthorizedException && $request->expectsJson())
         {
-            return response()->json(['errors' => ['message' => 'model not defined']], 500);
+            return response()->json(['errors' => ['message' => $exception->getMessage()]], 401);
         }
 
+        if($exception instanceof ValidationException && $request->expectsJson())
+        {
+            return response()->json(['errors' => ['message' => $exception->getMessage()]], 422);
+        }
+
+        if($exception instanceof ModelNotDefined && $request->expectsJson())
+        {
+            return response()->json(['errors' => ['message' => $exception->getMessage()]], 500);
+        }
 
         return parent::render($request, $exception);
     }

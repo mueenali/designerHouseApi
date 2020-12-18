@@ -56,5 +56,15 @@ class Team extends Model
         return (bool)$this->invitations()->where('recipient_email', $email)->count();
     }
 
+    public function addUserToTeam(int $user_id)
+    {
+       return $this->members()->attach($user_id);
+    }
+
+    public function removeUserFromTeam(int $user_id)
+    {
+        return $this->members()->detach($user_id);
+    }
+
 
 }

@@ -79,4 +79,15 @@ class TeamsController extends Controller
         return response()->json(['message' => 'Successfully deleted the team']);
     }
 
+    public function removeMember(int $team_id, int $user_id)
+    {
+        $result = $this->teamService->removeMember($team_id, $user_id);
+        if(!$result)
+        {
+            return response()->json(['errors' => ['member' => 'Problem in removing the member']], 400);
+        }
+
+        return response()->json(['message' => 'Member removed successfully']);
+    }
+
 }

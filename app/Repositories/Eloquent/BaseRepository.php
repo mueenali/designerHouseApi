@@ -78,7 +78,7 @@ abstract class BaseRepository implements IBaseRepository, ICriteria
     {
         if(!method_exists($this, 'model'))
         {
-            throw new ModelNotDefined();
+            throw new ModelNotDefined('model not defined');
         }
 
         return app()->make($this->model());

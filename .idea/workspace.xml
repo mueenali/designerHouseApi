@@ -20,15 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60d29328-1f52-4112-9a81-5bad95e82bd6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_5_2020_2_25_AM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_5_2020_2_25_AM__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Teams/InvitationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Teams/InvitationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mail/SendInvitationToJoinTeam.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/SendInvitationToJoinTeam.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Teams/TeamsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Teams/TeamsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Team.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Team.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Policies/TeamPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/TeamPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/ServicesServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/ServicesServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Interfaces/IUserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Interfaces/IUserRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/Interfaces/IInvitationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Interfaces/IInvitationService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Interfaces/ITeamService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Interfaces/ITeamService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/InvitationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/InvitationService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/TeamService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/TeamService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/helpers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/emails/invitations/invite-new-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/invitations/invite-new-user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_11_115947_create_invitations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_11_115947_create_invitations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +245,8 @@
       <workItem from="1607680009483" duration="396000" />
       <workItem from="1607680430434" duration="7846000" />
       <workItem from="1607811623481" duration="2299000" />
-      <workItem from="1608156220369" duration="4908000" />
+      <workItem from="1608156220369" duration="5096000" />
+      <workItem from="1608240979009" duration="10643000" />
     </task>
     <servers />
   </component>
@@ -331,9 +342,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="289" y="147" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1608159385434" />
-    <state x="295" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1607693640032">
+    <state x="295" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1608243624502">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="295" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1607693640032" />
+    <state x="295" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1608243624502" />
   </component>
 </project>

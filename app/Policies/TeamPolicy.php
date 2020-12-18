@@ -68,6 +68,11 @@ class TeamPolicy
         return $user->isOwnerOfTeam($team);
     }
 
+    public function ownerOfTeam(User $user, Team $team)
+    {
+        return $user->isOwnerOfTeam($team);
+    }
+
     /**
      * Determine whether the user can restore the team.
      *

@@ -16,4 +16,5 @@ interface ITeamService
     public function getUserTeams(): Collection;
     public function updateTeam(int $id, array $data): Team;
     public function deleteTeam(int $id): bool;
+    public function removeMember(int $id, int $user_id): bool;
 }

@@ -6,19 +6,23 @@ namespace App\Services;
 
 use App\Models\Team;
 use App\Repositories\Interfaces\ITeamRepository;
+use App\Repositories\Interfaces\IUserRepository;
 use App\Services\Interfaces\ITeamService;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Validation\UnauthorizedException;
 
 class TeamService implements ITeamService
 {
 
     use AuthorizesRequests;
     private ITeamRepository $teamRepository;
+    private IUserRepository $userRepository;
 
-    public function __construct(ITeamRepository $teamRepository)
+    public function __construct(ITeamRepository $teamRepository, IUserRepository $userRepository)
     {
         $this->teamRepository = $teamRepository;
+        $this->userRepository = $userRepository;
     }
 
     public function getAllTeams(): Collection
@@ -62,5 +66,19 @@ class TeamService implements ITeamService
         return $this->teamRepository->delete($id);
     }
 
+    public function removeMember(int $id, int $user_id): bool
+    {
+        $team = $this->teamRepository->find($id);
+        $user = $this->userRepository->find($user_id);
+
+        if($user->isOwnerOfTeam($team))
+        {
+            throw new UnauthorizedException('Cannot remove the team owner');
+        }
+
+        $this->authorize('ownerOfTeam', $team);
+
+        return $team->removeUserFromTeam($user_id);
+    }
 
 }

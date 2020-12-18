@@ -17,7 +17,7 @@ class CreateInvitationsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('team_id')->unsigned();
             $table->bigInteger('sender_id')->unsigned();
-            $table->bigInteger('recipient_email')->unsigned()->index();
+            $table->string('recipient_email')->index();
             $table->string('token');
             $table->timestamps();
 
