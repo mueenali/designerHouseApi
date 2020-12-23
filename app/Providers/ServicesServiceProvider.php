@@ -3,9 +3,11 @@
 namespace App\Providers;
 
 use App\Services\AuthService;
+use App\Services\ChatService;
 use App\Services\CommentService;
 use App\Services\DesignService;
 use App\Services\Interfaces\IAuthService;
+use App\Services\Interfaces\IChatService;
 use App\Services\Interfaces\ICommentService;
 use App\Services\Interfaces\IDesignService;
 use App\Services\Interfaces\IInvitationService;
@@ -41,5 +43,6 @@ class ServicesServiceProvider extends ServiceProvider
         $this->app->bind(ICommentService::class, CommentService::class);
         $this->app->bind(ITeamService::class, TeamService::class);
         $this->app->bind(IInvitationService::class, InvitationService::class);
+        $this->app->bind(IChatService::class, ChatService::class);
     }
 }

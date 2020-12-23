@@ -79,7 +79,7 @@ class DesignService implements IDesignService
             }
         }
 
-         return $this->designRepository->delete($id);
+         return $design->delete();
     }
 
     public function getAllDesigns(): Collection

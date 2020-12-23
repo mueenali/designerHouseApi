@@ -63,7 +63,7 @@ class TeamService implements ITeamService
         $team = $this->teamRepository->find($id);
         $this->authorize('delete', $team);
 
-        return $this->teamRepository->delete($id);
+        return $team->delete();
     }
 
     public function removeMember(int $id, int $user_id): bool

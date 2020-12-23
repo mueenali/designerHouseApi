@@ -21,23 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="60d29328-1f52-4112-9a81-5bad95e82bd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Teams/InvitationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Teams/InvitationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Teams/TeamsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Teams/TeamsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Team.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Team.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/TeamPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/TeamPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/ServicesServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/ServicesServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Interfaces/IUserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Interfaces/IUserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Interfaces/IInvitationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Interfaces/IInvitationService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Interfaces/ITeamService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Interfaces/ITeamService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/CommentService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/CommentService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/DesignService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/DesignService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/InvitationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/InvitationService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/TeamService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/TeamService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_11_115947_create_invitations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_11_115947_create_invitations_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -246,7 +238,11 @@
       <workItem from="1607680430434" duration="7846000" />
       <workItem from="1607811623481" duration="2299000" />
       <workItem from="1608156220369" duration="5096000" />
-      <workItem from="1608240979009" duration="10643000" />
+      <workItem from="1608240979009" duration="10832000" />
+      <workItem from="1608551626807" duration="121000" />
+      <workItem from="1608551813630" duration="2023000" />
+      <workItem from="1608555323205" duration="5743000" />
+      <workItem from="1608728368038" duration="2911000" />
     </task>
     <servers />
   </component>
@@ -286,10 +282,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1604792862786" />
-    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser" timestamp="1607559168910">
+    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser" timestamp="1608729123366">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1607559168910" />
+    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1608729123366" />
     <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606136412162">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -322,10 +318,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1202" height="234" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603200468081" />
-    <state x="395" y="51" key="NewPhpClassDialog" timestamp="1607692940927">
+    <state x="395" y="51" key="NewPhpClassDialog" timestamp="1608729110720">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="395" y="51" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1607692940927" />
+    <state x="395" y="51" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1608729110720" />
     <state x="468" y="252" key="NewPhpFileDialog" timestamp="1608159610836">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -338,13 +334,13 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="225" y="61" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1607106344326" />
-    <state x="289" y="147" key="run.anything.popup" timestamp="1608159385434">
+    <state x="289" y="147" key="run.anything.popup" timestamp="1608729819425">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="289" y="147" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1608159385434" />
-    <state x="295" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1608243624502">
+    <state x="289" y="147" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1608729819425" />
+    <state x="295" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1608730622203">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="295" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1608243624502" />
+    <state x="295" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1608730622203" />
   </component>
 </project>

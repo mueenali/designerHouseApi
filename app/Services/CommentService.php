@@ -43,6 +43,6 @@ class CommentService implements ICommentService
         $comment = $this->commentRepository->find($id);
         $this->authorize('delete', $comment);
 
-        return $this->commentRepository->delete($id);
+        return $comment->delete();
     }
 }

@@ -97,7 +97,7 @@ class InvitationService implements IInvitationService
          $invitation = $this->invitationRepository->find($id);
          $this->authorize('delete', $invitation);
 
-         return $this->invitationRepository->delete($id);
+         return $invitation->delete();
     }
 
 
