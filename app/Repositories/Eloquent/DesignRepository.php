@@ -4,8 +4,10 @@
 namespace App\Repositories\Eloquent;
 
 
+use App\Helpers\DesignSearchParams;
 use App\Models\Design;
 use App\Repositories\Interfaces\IDesignRepository;
+use Illuminate\Database\Eloquent\Collection;
 
 class DesignRepository extends BaseRepository implements IDesignRepository
 {
@@ -19,4 +21,5 @@ class DesignRepository extends BaseRepository implements IDesignRepository
         $design = $this->find($id);
         $design->retag($data);
     }
+
 }

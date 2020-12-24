@@ -21,15 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="60d29328-1f52-4112-9a81-5bad95e82bd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/ServicesServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/ServicesServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/CommentService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/CommentService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Designs/DesignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Designs/DesignController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/DesignRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/DesignRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Interfaces/IDesignRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Interfaces/IDesignRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/DesignService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/DesignService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/InvitationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/InvitationService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/TeamService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/TeamService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Interfaces/IDesignService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Interfaces/IDesignService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Interfaces/IUserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Interfaces/IUserService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UserService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -242,7 +241,9 @@
       <workItem from="1608551626807" duration="121000" />
       <workItem from="1608551813630" duration="2023000" />
       <workItem from="1608555323205" duration="5743000" />
-      <workItem from="1608728368038" duration="2911000" />
+      <workItem from="1608728368038" duration="3211000" />
+      <workItem from="1608759923721" duration="5413000" />
+      <workItem from="1608816232721" duration="1935000" />
     </task>
     <servers />
   </component>
@@ -282,14 +283,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1604792862786" />
-    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser" timestamp="1608729123366">
+    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser" timestamp="1608817040245">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1608729123366" />
-    <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606136412162">
+    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1608817040245" />
+    <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608775017289">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1606136412162" />
+    <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1608775017289" />
     <state x="363" y="83" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608160924099">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -318,10 +319,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1202" height="234" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603200468081" />
-    <state x="395" y="51" key="NewPhpClassDialog" timestamp="1608729110720">
+    <state x="395" y="51" key="NewPhpClassDialog" timestamp="1608817031428">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="395" y="51" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1608729110720" />
+    <state x="395" y="51" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1608817031428" />
     <state x="468" y="252" key="NewPhpFileDialog" timestamp="1608159610836">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

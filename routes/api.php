@@ -24,16 +24,11 @@ Route::group(['middleware' => ['auth:api']], fn() => [
         Route::post('designs', 'Designs\DesignController@upload'),
         Route::put('designs/{id}', 'Designs\DesignController@update'),
         Route::delete('designs/{id}', 'Designs\DesignController@delete'),
-        Route::get('designs', 'Designs\DesignController@index'),
-        Route::get('designs/{id}', 'Designs\DesignController@findDesign'),
 
         //comments routes
         Route::post('designs/{id}/comments', 'Designs\CommentController@store'),
         Route::put('comments/{id}', 'Designs\CommentController@update'),
         Route::delete('comments/{id}', 'Designs\CommentController@delete'),
-
-        //users route
-        Route::get('users', 'User\UserController@index'),
 
         //like routes
         Route::post('designs/{id}/like', 'Designs\DesignController@like'),
@@ -79,3 +74,15 @@ Route::group(['middleware' => ['guest:api']], fn() => [
 Route::get('currentUser', 'User\UserController@getCurrentUser');
 
 Route::get('teams/slug/{slug}', 'TeamsController@findBySlug');
+
+//design routes
+Route::get('designs', 'Designs\DesignController@index');
+Route::get('designs/{id}', 'Designs\DesignController@findDesign');
+
+//users route
+Route::get('users', 'User\UserController@index');
+
+//search routes
+
+Route::get('search/designs', 'Designs\DesignControllers@search');
+Route::get('search/designers', 'Users\UserControllers@search');

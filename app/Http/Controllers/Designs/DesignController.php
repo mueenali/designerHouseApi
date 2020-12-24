@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Designs;
 
+use App\Helpers\DesignSearchParams;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UploadRequest;
 use App\Http\Resources\DesignResource;
@@ -78,5 +79,14 @@ class DesignController extends Controller
     {
         $isLiked = $this->designService->isLikedByUser($id);
         return response()->json(['liked' => $isLiked]);
+    }
+
+    public function search(Request $request)
+    {
+        $params = new DesignSearchParams($request->has_team, $request->has_comments,
+            $request->q, $request->orderBy);
+
+        $designs = $this->designService->search($params);
+        return DesignResource::collection($designs);
     }
 }

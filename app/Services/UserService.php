@@ -4,8 +4,10 @@
 namespace App\Services;
 
 
+use App\Helpers\DesignersSearchParams;
 use App\Http\Requests\UpdateProfileRequest;
 use App\Repositories\Eloquent\Criteria\EagerLoad;
+use App\Repositories\Eloquent\Criteria\SearchDesigners;
 use App\Repositories\Interfaces\IUserRepository;
 use App\Services\Interfaces\IUserService;
 use Grimzy\LaravelMysqlSpatial\Types\Point;
@@ -51,5 +53,10 @@ class UserService implements IUserService
     public function getAllUsers(): Collection
     {
         return $this->userRepository->withCriteria([new EagerLoad(['designs'])])->all();
+    }
+
+    public function search(DesignersSearchParams $params): Collection
+    {
+        return $this->userRepository->withCriteria([new SearchDesigners($params)])->all();
     }
 }

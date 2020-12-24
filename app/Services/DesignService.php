@@ -4,12 +4,14 @@
 namespace App\Services;
 
 
+use App\Helpers\DesignSearchParams;
 use App\Jobs\UploadImage;
 use App\Models\Design;
 use App\Repositories\Eloquent\Criteria\EagerLoad;
 use App\Repositories\Eloquent\Criteria\ForUser;
 use App\Repositories\Eloquent\Criteria\IsLive;
 use App\Repositories\Eloquent\Criteria\LatestFirst;
+use App\Repositories\Eloquent\Criteria\SearchDesigns;
 use App\Repositories\Interfaces\IDesignRepository;
 use App\Services\Interfaces\IDesignService;
 use Illuminate\Database\Eloquent\Collection;
@@ -116,6 +118,11 @@ class DesignService implements IDesignService
     {
         $design = $this->designRepository->find($id);
         return $design->isLikedByUser(auth()->id());
+    }
+
+    public function search(DesignSearchParams $params): Collection
+    {
+        return $this->designRepository->withCriteria([new SearchDesigns($params)])->all();
     }
 
 }
