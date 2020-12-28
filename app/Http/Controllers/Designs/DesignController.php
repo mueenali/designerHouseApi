@@ -89,4 +89,22 @@ class DesignController extends Controller
         $designs = $this->designService->search($params);
         return DesignResource::collection($designs);
     }
+
+    public function findBySlug(string $slug)
+    {
+        $design = $this->designService->findBySlug($slug);
+        return new DesignResource($design);
+    }
+
+    public function getTeamDesigns(int $team_id)
+    {
+        $designs = $this->designService->getTeamDesigns($team_id);
+        return DesignResource::collection($designs);
+    }
+
+    public function getUserDesigns(int $user_id)
+    {
+        $designs = $this->designService->getUserDesigns($user_id);
+        return DesignResource::collection($designs);
+    }
 }

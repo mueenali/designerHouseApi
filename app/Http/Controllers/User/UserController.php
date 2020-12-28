@@ -52,4 +52,10 @@ class UserController extends Controller
          return UserResource::collection($designers);
      }
 
+     public function getByUsername(string $username)
+     {
+         $user = $this->userService->getUserByUsername($username);
+         return new UserResource($user);
+     }
+
 }

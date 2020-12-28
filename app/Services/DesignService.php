@@ -122,7 +122,29 @@ class DesignService implements IDesignService
 
     public function search(DesignSearchParams $params): Collection
     {
-        return $this->designRepository->withCriteria([new SearchDesigns($params)])->all();
+        return $this->designRepository
+            ->withCriteria([new SearchDesigns($params)])
+            ->all();
     }
 
+    public function findBySlug(string $slug): Design
+    {
+        return $this->designRepository
+            ->withCriteria([new IsLive()])
+            ->findWhereFirst('slug', $slug);
+    }
+
+    public function getTeamDesigns(int $team_id): Collection
+    {
+        return $this->designRepository
+            ->withCriteria([new IsLive()])
+            ->findWhere('team_id', $team_id);
+    }
+
+    public function getUserDesigns(int $user_id): Collection
+    {
+       return $this->designRepository
+           ->withCriteria([new IsLive(), new ForUser($user_id)])
+           ->all();
+    }
 }

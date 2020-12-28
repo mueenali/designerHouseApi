@@ -20,15 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60d29328-1f52-4112-9a81-5bad95e82bd6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/DesignHouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DesignHouse.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Designs/DesignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Designs/DesignController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/DesignRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/DesignRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Interfaces/IDesignRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Interfaces/IDesignRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/DesignService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/DesignService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/Interfaces/IDesignService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Interfaces/IDesignService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/Interfaces/IUserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Interfaces/IUserService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UserService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,6 +164,8 @@
       <path value="$PROJECT_DIR$/vendor/cviebrock/eloquent-taggable" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
     </include_path>
   </component>
   <component name="ProjectId" id="1j8yuzAe7R42zOloKkDhlW6ztrT" />
@@ -171,7 +176,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vagm-master" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
@@ -243,7 +248,9 @@
       <workItem from="1608555323205" duration="5743000" />
       <workItem from="1608728368038" duration="3211000" />
       <workItem from="1608759923721" duration="5413000" />
-      <workItem from="1608816232721" duration="1935000" />
+      <workItem from="1608816232721" duration="2285000" />
+      <workItem from="1608890319360" duration="3943000" />
+      <workItem from="1609108257956" duration="48000" />
     </task>
     <servers />
   </component>
@@ -299,10 +306,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="410" y="241" width="444" height="277" key="ComposerInitDialogKey/0.0.1280.680@0.0.1280.680" timestamp="1603392933606" />
-    <state x="413" y="115" key="FileChooserDialogImpl" timestamp="1603392842541">
+    <state x="413" y="115" key="FileChooserDialogImpl" timestamp="1609108303300">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="413" y="115" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603392842541" />
+    <state x="413" y="115" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609108303300" />
     <state width="1202" height="234" key="GridCell.Tab.0.bottom" timestamp="1603200468081">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

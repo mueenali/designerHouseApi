@@ -72,12 +72,17 @@ Route::group(['middleware' => ['guest:api']], fn() => [
 );
 
 Route::get('currentUser', 'User\UserController@getCurrentUser');
+Route::get('user/{username}', 'User\UserController@getByUsername');
 
-Route::get('teams/slug/{slug}', 'TeamsController@findBySlug');
+Route::get('teams/slug/{slug}', 'Teams\TeamsController@findBySlug');
+
 
 //design routes
 Route::get('designs', 'Designs\DesignController@index');
 Route::get('designs/{id}', 'Designs\DesignController@findDesign');
+Route::get('designs/slug/{slug}', 'Designs\DesignController@findBySlug');
+Route::get('users/{user_id}/designs', 'Designs\DesignController@getUserDesigns');
+Route::get('teams/{team_id}/designs', 'Designs\DesignController@getTeamDesigns');
 
 //users route
 Route::get('users', 'User\UserController@index');

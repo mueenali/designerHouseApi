@@ -6,6 +6,7 @@ namespace App\Services;
 
 use App\Helpers\DesignersSearchParams;
 use App\Http\Requests\UpdateProfileRequest;
+use App\Models\User;
 use App\Repositories\Eloquent\Criteria\EagerLoad;
 use App\Repositories\Eloquent\Criteria\SearchDesigners;
 use App\Repositories\Interfaces\IUserRepository;
@@ -58,5 +59,10 @@ class UserService implements IUserService
     public function search(DesignersSearchParams $params): Collection
     {
         return $this->userRepository->withCriteria([new SearchDesigners($params)])->all();
+    }
+
+    public function getUserByUsername(string $username): User
+    {
+        return $this->userRepository->findWhereFirst('username', $username);
     }
 }

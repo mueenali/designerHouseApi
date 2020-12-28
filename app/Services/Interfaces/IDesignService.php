@@ -19,4 +19,7 @@ interface IDesignService
     public function likeDesign(int $id): bool;
     public function isLikedByUser(int $id): bool;
     public function search(DesignSearchParams $params): Collection;
+    public function findBySlug(string $slug): Design;
+    public function getTeamDesigns(int $team_id): Collection;
+    public function getUserDesigns(int $user_id): Collection;
 }
