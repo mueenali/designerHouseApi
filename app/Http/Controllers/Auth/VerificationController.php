@@ -58,7 +58,7 @@ class VerificationController extends Controller
             return response()->json(["errors" => ["message" => "Email Address is already verified",]], 422);
         }
 
-        return response()->json(['status' => 'verification link resent'], 200);
+        return response()->json(['status' => 'verification link has been resent'], 200);
     }
 }
 

@@ -17,7 +17,7 @@ class UserResource extends JsonResource
         return [
             'id' => $this->id,
             'username' => $this->username,
-            $this->mergeWhen(auth()->check() && auth()->id == $this->id, [
+            $this->mergeWhen(auth()->check() && auth()->id() == $this->id, [
                 'email' => $this->email,
             ]),
             'name' => $this->name,

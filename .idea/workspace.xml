@@ -20,19 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60d29328-1f52-4112-9a81-5bad95e82bd6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DesignHouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DesignHouse.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Designs/DesignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Designs/DesignController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/DesignService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/DesignService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Interfaces/IDesignService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Interfaces/IDesignService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Interfaces/IUserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Interfaces/IUserService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UserService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +166,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vagm-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
@@ -251,6 +241,11 @@
       <workItem from="1608816232721" duration="2285000" />
       <workItem from="1608890319360" duration="3943000" />
       <workItem from="1609108257956" duration="48000" />
+      <workItem from="1609199523057" duration="317000" />
+      <workItem from="1609463749578" duration="55000" />
+      <workItem from="1609861961565" duration="2673000" />
+      <workItem from="1609879984965" duration="1921000" />
+      <workItem from="1609889345340" duration="6340000" />
     </task>
     <servers />
   </component>
@@ -306,10 +301,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="410" y="241" width="444" height="277" key="ComposerInitDialogKey/0.0.1280.680@0.0.1280.680" timestamp="1603392933606" />
-    <state x="413" y="115" key="FileChooserDialogImpl" timestamp="1609108303300">
+    <state x="413" y="115" key="FileChooserDialogImpl" timestamp="1609463803398">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="413" y="115" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609108303300" />
+    <state x="413" y="115" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609463803398" />
     <state width="1202" height="234" key="GridCell.Tab.0.bottom" timestamp="1603200468081">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
