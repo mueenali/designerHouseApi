@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="60d29328-1f52-4112-9a81-5bad95e82bd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/ResetPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/ResetPassword.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,6 +245,10 @@
       <workItem from="1609861961565" duration="2673000" />
       <workItem from="1609879984965" duration="1921000" />
       <workItem from="1609889345340" duration="6340000" />
+      <workItem from="1609940258004" duration="609000" />
+      <workItem from="1609965016572" duration="36000" />
+      <workItem from="1609979533542" duration="1268000" />
+      <workItem from="1609981998281" duration="3153000" />
     </task>
     <servers />
   </component>
@@ -301,10 +304,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="410" y="241" width="444" height="277" key="ComposerInitDialogKey/0.0.1280.680@0.0.1280.680" timestamp="1603392933606" />
-    <state x="413" y="115" key="FileChooserDialogImpl" timestamp="1609463803398">
+    <state x="413" y="115" key="FileChooserDialogImpl" timestamp="1609959857017">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="413" y="115" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609463803398" />
+    <state x="413" y="115" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609959857017" />
     <state width="1202" height="234" key="GridCell.Tab.0.bottom" timestamp="1603200468081">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -329,6 +332,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="468" y="252" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1608159610836" />
+    <state x="412" y="38" key="RollbackChangesDialog" timestamp="1609980842622">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="412" y="38" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1609980842622" />
     <state x="134" y="0" key="SettingsEditor" timestamp="1607519537379">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
