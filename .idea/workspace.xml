@@ -21,7 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="60d29328-1f52-4112-9a81-5bad95e82bd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Notifications/ResetPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/ResetPassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Designs/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Designs/CommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Designs/DesignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Designs/DesignController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Team.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Team.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/DesignService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/DesignService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/InvitationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/InvitationService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +46,13 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/composer.json" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="04d7f5a2-ab0c-46c5-b5f1-ffd482e4245e" name="debugServer" use_path_mappings="true" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
       <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
@@ -164,11 +176,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -179,7 +192,12 @@
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
   </component>
@@ -249,6 +267,13 @@
       <workItem from="1609965016572" duration="36000" />
       <workItem from="1609979533542" duration="1268000" />
       <workItem from="1609981998281" duration="3153000" />
+      <workItem from="1610027309537" duration="1326000" />
+      <workItem from="1610029267996" duration="954000" />
+      <workItem from="1610030289222" duration="2596000" />
+      <workItem from="1610047409218" duration="251000" />
+      <workItem from="1610047683238" duration="2840000" />
+      <workItem from="1610051605534" duration="250000" />
+      <workItem from="1610309183415" duration="5741000" />
     </task>
     <servers />
   </component>
@@ -267,90 +292,8 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="213" y="0" key="#CLI_Interpreters" timestamp="1603393095847">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="213" y="0" key="#CLI_Interpreters/0.0.1280.680@0.0.1280.680" timestamp="1603393095847" />
-    <state x="384" y="165" key="#Notifications" timestamp="1604861328372">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="384" y="165" key="#Notifications/0.0.1280.680@0.0.1280.680" timestamp="1604861328372" />
-    <state x="349" y="0" key="#PHP" timestamp="1604788749916">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="349" y="0" key="#PHP/0.0.1280.680@0.0.1280.680" timestamp="1604788749916" />
-    <state x="229" y="0" key="#Test_Frameworks" timestamp="1604788658806">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="229" y="0" key="#Test_Frameworks/0.0.1280.680@0.0.1280.680" timestamp="1604788658806" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604792862786">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1604792862786" />
-    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser" timestamp="1608817040245">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="438" y="10" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1608817040245" />
-    <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608775017289">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1608775017289" />
-    <state x="363" y="83" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608160924099">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="363" y="83" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1608160924099" />
-    <state x="410" y="241" width="444" height="277" key="ComposerInitDialogKey" timestamp="1603392933606">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="410" y="241" width="444" height="277" key="ComposerInitDialogKey/0.0.1280.680@0.0.1280.680" timestamp="1603392933606" />
-    <state x="413" y="115" key="FileChooserDialogImpl" timestamp="1609959857017">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="413" y="115" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609959857017" />
-    <state width="1202" height="234" key="GridCell.Tab.0.bottom" timestamp="1603200468081">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1202" height="234" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603200468081" />
-    <state width="1202" height="234" key="GridCell.Tab.0.center" timestamp="1603200468081">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1202" height="234" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603200468081" />
-    <state width="1202" height="234" key="GridCell.Tab.0.left" timestamp="1603200468081">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1202" height="234" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603200468081" />
-    <state width="1202" height="234" key="GridCell.Tab.0.right" timestamp="1603200468081">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1202" height="234" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603200468081" />
-    <state x="395" y="51" key="NewPhpClassDialog" timestamp="1608817031428">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="395" y="51" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1608817031428" />
-    <state x="468" y="252" key="NewPhpFileDialog" timestamp="1608159610836">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="468" y="252" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1608159610836" />
-    <state x="412" y="38" key="RollbackChangesDialog" timestamp="1609980842622">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="412" y="38" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1609980842622" />
-    <state x="134" y="0" key="SettingsEditor" timestamp="1607519537379">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="134" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1607519537379" />
-    <state x="225" y="61" key="Vcs.Push.Dialog.v2" timestamp="1607106344326">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="225" y="61" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1607106344326" />
-    <state x="289" y="147" key="run.anything.popup" timestamp="1608729819425">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="289" y="147" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1608729819425" />
-    <state x="295" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1608730622203">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="295" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1608730622203" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -51,7 +51,7 @@ class Team extends Model
         return $this->hasMany(Invitation::class);
     }
 
-    public function hasPendingInvite(string $email)
+    public function hasPendingInvite(string $email): bool
     {
         return (bool)$this->invitations()->where('recipient_email', $email)->count();
     }

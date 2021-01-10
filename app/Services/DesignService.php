@@ -5,6 +5,7 @@ namespace App\Services;
 
 
 use App\Helpers\DesignSearchParams;
+use App\Jobs\DeleteImage;
 use App\Jobs\UploadImage;
 use App\Models\Design;
 use App\Repositories\Eloquent\Criteria\EagerLoad;
@@ -34,11 +35,10 @@ class DesignService implements IDesignService
 
     public function upload($image): Design
     {
-        $image_path = $image->getPathname();
         $file_name = time()."_".preg_replace('/\s+/', '_',
                 strtolower($image->getClientOriginalName()));
 
-        $temp = $image->storeAs('uploads/original', $file_name, 'temp');
+        $image->storeAs('uploads/original', $file_name, 'temp');
 
         $design = auth()->user()->designs()->create([
             'image' => $file_name,
@@ -73,15 +73,9 @@ class DesignService implements IDesignService
         $design = $this->designRepository->find($id);
         $this->authorize('delete',$design);
 
-        foreach(['large', 'original', 'thumbnail'] as $size)
-        {
-            if(Storage::disk($design->disk)->exists("uploads/designs/{$size}/".$design->image))
-            {
-                Storage::disk($design->disk)->delete("uploads/designs/{$size}/".$design->image);
-            }
-        }
+        $this->dispatch(new DeleteImage($design->image, $this->disk));
 
-         return $design->delete();
+        return $design->delete();
     }
 
     public function getAllDesigns(): Collection
@@ -90,7 +84,6 @@ class DesignService implements IDesignService
             [
                 new LatestFirst(),
                 new IsLive(),
-                new ForUser(auth()->id()),
                 new EagerLoad(['user', 'comments'])
             ])->all();
     }
@@ -108,10 +101,10 @@ class DesignService implements IDesignService
         {
             $design->unLike();
             return false;
-        }else {
-            $design->like();
-            return true;
         }
+
+        $design->like();
+        return true;
     }
 
     public function isLikedByUser(int $id): bool

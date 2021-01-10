@@ -11,6 +11,7 @@ use App\Repositories\Interfaces\ITeamRepository;
 use App\Repositories\Interfaces\IUserRepository;
 use App\Services\Interfaces\IInvitationService;
 use Dotenv\Exception\ValidationException;
+use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Validation\UnauthorizedException;
@@ -79,7 +80,7 @@ class InvitationService implements IInvitationService
         $this->authorize('respond', $invitation);
 
 
-        if($invitation->token != $token)
+        if($invitation->token !== $token)
         {
             throw new UnauthorizedException('Invalid Token');
         }
@@ -107,7 +108,7 @@ class InvitationService implements IInvitationService
             'recipient_email' => $email,
             'sender_id' => auth()->id(),
             'team_id' => $team_id,
-            'token' => md5(uniqid(microtime()))
+            'token' => md5(uniqid(microtime(), false))
         ]);
 
         send_email($email, new SendInvitationToJoinTeam($invitation, $user_exists));

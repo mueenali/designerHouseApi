@@ -48,8 +48,9 @@ class DesignController extends Controller
     {
         $result = $this->designService->delete($id);
 
-        if (!$result)
+        if (!$result) {
             return response()->json(['error' => ['design' => 'Problem in deleting the design']], 400);
+        }
 
         return response()->json(['message' => 'Design deleted successfully']);
     }

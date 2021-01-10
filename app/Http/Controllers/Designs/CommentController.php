@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCommentRequest;
 use App\Http\Resources\CommentResource;
 use App\Services\Interfaces\ICommentService;
+use Illuminate\Http\JsonResponse;
 
 class CommentController extends Controller
 {
@@ -26,18 +27,19 @@ class CommentController extends Controller
         return new CommentResource($comment);
     }
 
-    public function update(StoreCommentRequest $request ,int $id)
+    public function update(StoreCommentRequest $request ,int $id): CommentResource
     {
         $comment = $this->commentService->updateComment($id, ['body' => $request->body]);
         return new CommentResource($comment);
     }
 
-    public function delete(int $id)
+    public function delete(int $id): JsonResponse
     {
         $result = $this->commentService->deleteComment($id);
 
-        if(!$result)
+        if(!$result) {
             return response()->json(['errors' => ['comment' => 'Problem in deleting the comment']], 400);
+        }
 
         return response()->json(['message' => 'Comment deleted successfully']);
     }
