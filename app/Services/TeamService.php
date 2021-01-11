@@ -47,7 +47,7 @@ class TeamService implements ITeamService
 
     public function getUserTeams(): Collection
     {
-        return auth()->user()->teams();
+        return auth()->user()->teams;
     }
 
     public function updateTeam(int $id, array $data): Team

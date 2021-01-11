@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['middleware' => ['auth:api']], function ()
+Route::group(['middleware' => ['auth:api', 'cacheable:120']], function ()
 {
         Route::post('logout', 'Auth\LoginController@logout');
         Route::get('users/teams', 'Teams\TeamsController@getUserTeams');
@@ -95,9 +95,9 @@ Route::group(['middleware' => ['guest:api']], function () {
     Route::post('resetPassword', 'Auth\ResetPasswordController@reset');
 });
 
-Route::get('currentUser', 'User\UserController@getCurrentUser');
+Route::get('currentUser', 'User\UserController@getCurrentUser')->middleware('cacheable:120');
 
-Route::prefix('teams')->group(function ()
+Route::prefix('teams')->middleware('cacheable:120')->group(function ()
 {
     //teams routes
     Route::get('{team_id}/designs', 'Designs\DesignController@getTeamDesigns');
@@ -105,7 +105,7 @@ Route::prefix('teams')->group(function ()
 });
 
 
-Route::prefix('designs')->group(function ()
+Route::prefix('designs')->middleware('cacheable:120')->group(function ()
 {
     //design routes
     Route::get('/', 'Designs\DesignController@index');
@@ -116,7 +116,7 @@ Route::prefix('designs')->group(function ()
 
 
 
-Route::prefix('users')->group(function ()
+Route::prefix('users')->middleware('cacheable:120')->group(function ()
 {
     //users route
     Route::get('/', 'User\UserController@index');
@@ -125,7 +125,7 @@ Route::prefix('users')->group(function ()
 });
 
 
-Route::prefix('search')->group(function ()
+Route::prefix('search')->middleware('cacheable:120')->group(function ()
 {
     //search routes
     Route::get('designs', 'Designs\DesignControllers@search');
