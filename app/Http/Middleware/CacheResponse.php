@@ -18,7 +18,8 @@ class CacheResponse
     public function handle($request, Closure $next, $ttl)
     {
 
-        if($request->isMethod('post') || $request->isMethod('put'))
+        if($request->isMethod('post') || $request->isMethod('put')
+            || $request->isMethod('delete'))
         {
             return $next($request);
         }

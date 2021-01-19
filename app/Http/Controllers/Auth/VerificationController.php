@@ -55,7 +55,7 @@ class VerificationController extends Controller
         $result = $this->authService->resendVerificationLink($request->email);
 
         if(!$result) {
-            return response()->json(["errors" => ["message" => "Email Address is already verified",]], 422);
+            return response()->json(["errors" => ["message" => "Email Address is already verified"]], 422);
         }
 
         return response()->json(['status' => 'verification link has been resent'], 200);

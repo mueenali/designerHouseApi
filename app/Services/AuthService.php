@@ -4,15 +4,18 @@
 namespace App\Services;
 
 
+use App\Jobs\ResendVerificationLink;
 use App\Models\User;
 use App\Repositories\Interfaces\IUserRepository;
 use App\Services\Interfaces\IAuthService;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Intervention\Image\Exception\NotFoundException;
+use Illuminate\Foundation\Bus\DispatchesJobs;
 
 class AuthService implements IAuthService
 {
+    use DispatchesJobs;
+
     private IUserRepository $userRepository;
     public function __construct(IUserRepository $userRepository)
     {
@@ -41,7 +44,7 @@ class AuthService implements IAuthService
         $user = $this->userRepository->findWhereFirst('email', $email);
 
         if(!$user) {
-             throw new ModelNotFoundException();
+             throw new ModelNotFoundException('Model is not found');
         }
 
         if($user->hasVerifiedEmail()) {

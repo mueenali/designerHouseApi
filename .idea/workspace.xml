@@ -20,13 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60d29328-1f52-4112-9a81-5bad95e82bd6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DesignHouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DesignHouse.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/TeamService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/TeamService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CacheResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CacheResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/AuthService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/AuthService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/DesignService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/DesignService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +137,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kahoot" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
@@ -233,6 +234,15 @@
       <workItem from="1610051605534" duration="250000" />
       <workItem from="1610309183415" duration="5741000" />
       <workItem from="1610325106691" duration="5650000" />
+      <workItem from="1610402318954" duration="36000" />
+      <workItem from="1610411439674" duration="4404000" />
+      <workItem from="1610416138439" duration="23000" />
+      <workItem from="1610657304414" duration="1410000" />
+      <workItem from="1610705552403" duration="35000" />
+      <workItem from="1610744514437" duration="582000" />
+      <workItem from="1610747184002" duration="1494000" />
+      <workItem from="1611025912643" duration="313000" />
+      <workItem from="1611030438075" duration="2886000" />
     </task>
     <servers />
   </component>

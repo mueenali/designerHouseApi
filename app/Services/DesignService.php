@@ -73,7 +73,7 @@ class DesignService implements IDesignService
         $design = $this->designRepository->find($id);
         $this->authorize('delete',$design);
 
-        $this->dispatch(new DeleteImage($design->image, $this->disk));
+        $this->dispatch(new DeleteImage($design->image, $design->disk));
 
         return $design->delete();
     }
